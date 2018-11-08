@@ -179,8 +179,8 @@ runBtn.addEventListener('click', () => {
     plotCostFunction()
     gradientDescent()
     drawLine()
-    document.querySelector('#line-eqn').innerHTML = `y = ${m * 10}x + ${b * 10}`
-    document.querySelector('#error').innerHTML = `Current Mean Squared Error: ${error}`
+    document.querySelector('#line-eqn').innerHTML = `y = ${(m * 10).toPrecision(4)}x + ${(b * 10).toPrecision(4)}`
+    document.querySelector('#error').innerHTML = `Current Mean Squared Error: ${error.toPrecision(3)}`
     iterations += 1
     document.querySelector('#it').innerHTML = iterations
 })
